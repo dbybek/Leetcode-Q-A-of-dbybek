@@ -21,6 +21,7 @@ public class BuildArrayFromPermutation
             res[i] = nums[nums[i]];
         }
         return res;
+//        System
     }
 	
 	public static void main(String[] args) 
