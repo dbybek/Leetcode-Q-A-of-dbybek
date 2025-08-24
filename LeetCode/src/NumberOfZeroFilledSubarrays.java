@@ -39,6 +39,6 @@ public class NumberOfZeroFilledSubarrays
 		}
 		sc.close();
 		NumberOfZeroFilledSubarrays Res = new NumberOfZeroFilledSubarrays();
-		System.out.print(Res);
+		System.out.print(Res.zeroFilledSubarray(arr));
 	}
 }
