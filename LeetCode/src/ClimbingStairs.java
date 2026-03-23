@@ -13,16 +13,30 @@ public class ClimbingStairs
 {
 	public int climbStairs(int n) 
 	{
+//		Approach I: Fibonacci using 3 variables.
+//		----------------------------------------
+//		if(n<2) {
+//			return n;
+//		}
+//		int res = 0, fib1 = 1, fib2 = 1;
+//		for(int i=2;i<=n;i++) {
+//			res = fib1 + fib2;
+//			fib1 = fib2;
+//			fib2 = res;
+//		}
+//		return res;
+//		
+//		Approach II: Fibonacci using 2 variables.
+//		-----------------------------------------
 		if(n<2) {
 			return n;
 		}
-		int res = 0, fib1 = 1, fib2 = 1;
-		for(int i=2;i<=n;i++) {
-			res = fib1 + fib2;
-			fib1 = fib2;
-			fib2 = res;
-		}
-		return res;
+        int res = 1, count = 1;
+        for(int i=2;i<=n;i++){
+            res += count;
+            count = res - count;
+        }
+        return res;
     }
 	
 	public static void main(String[] args) 
